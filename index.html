@@ -73,10 +73,13 @@
             .then(response => response.json())
             .then(data => {
                 document.getElementById('user-info').innerHTML = `
-                    <p><strong>IP:</strong> ${data.ip}</p>
-                    <p><strong>City:</strong> ${data.city}</p>
-                    <p><strong>Country:</strong> ${data.country_name}</p>
-                    <p><strong>Timezone:</strong> ${data.timezone}</p>
+        <strong>IP: <span id="ip"></span></strong><br>
+        <span><strong>City:</strong> <span id="city"></span></span><br>
+        <span><strong>Region:</strong> <span id="region"></span></span><br>
+        <span><strong>Country:</strong> <span id="country"></span></span><br>
+        <span><strong>Location:</strong> <span id="loc"></span></span><br>
+        <span><strong>Organization:</strong> <span id="org"></span></span><br>
+        <span><strong>Timezone:</strong> <span id="timezone"></span></span>
                 `;
             })
             .catch(() => {
